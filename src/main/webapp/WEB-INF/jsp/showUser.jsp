@@ -6,6 +6,9 @@
   </head>  
     
   <body>  
-    ${user.userName}  
+    用户名：${user.userName} 
+    <h1>年龄：${user.age} </h1>
+    <h1>ID：${user.id} </h1>
+    <h1>密码：${user.password} </h1> 
   </body>  
 </html>  
