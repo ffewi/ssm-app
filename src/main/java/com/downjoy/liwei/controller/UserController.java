@@ -20,8 +20,14 @@ public class UserController {
     public String toIndex(HttpServletRequest request, Model model) {
         int userId = Integer.parseInt(request.getParameter("id"));
         User user = this.userService.getUserById(userId);
-        model.addAttribute("user", user);
-        System.out.println(user.getUserName()+":"+user.getPassword());
+        if (user!=null) {
+            model.addAttribute("user", user);
+            System.out.println(user.getUserName()+":"+user.getPassword());
+        }else {
+            System.out.println("not found user!");
+        }
+        
+        
         return "showUser";
     }
 }
